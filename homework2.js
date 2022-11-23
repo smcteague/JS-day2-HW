@@ -104,19 +104,19 @@ console.log(person2.printInfo())
 const stringLength = (my_string) => {
     return new Promise((resolve, reject) => {
         if (my_string.length > 10) {
-            resolve(my_string)
+            resolve("Big Word")
         } else {
-            reject(my_string)
+            reject("Small Number")
         }
     })
 }
 
 stringLength('my sentence')
-    .then(() => {
-        console.log("Big Word")
+    .then((message) => {
+        console.log(message)
     })
-    .catch(() => {
-        console.log("Small Number")
+    .catch((message) => {
+        console.log(message)
     })
 
 
